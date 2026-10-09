@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CMDB Quiz – avec contexte FR</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <h1>CMDB Certification Quiz</h1>
+  <div class="counters">
+    <span class="c ok">Réussies <b id="cOk">0</b></span>
+    <span class="c ko">Ratées <b id="cKo">0</b></span>
+    <span class="c mis">Erreurs enregistrées <b id="cMis">0</b></span>
+  </div>
+</header>
+<main id="app">
+  <section id="menu" class="card">
+    <h2>Choisis un mode</h2>
+    <div class="modes">
+      <button data-mode="all">Toutes les questions</button>
+      <button data-mode="mistakes">Mes erreurs</button>
+      <button data-mode="random">20 au hasard</button>
+    </div>
+    <h3>Par thème</h3>
+    <div class="modes" id="topics"></div>
+    <p><button id="reset" class="link">Réinitialiser mes erreurs</button></p>
+  </section>
+  <section id="quiz" class="layout" hidden>
+    <div class="main card">
+      <div class="bar"><button id="home" class="link">← Menu</button><span id="prog"></span><button id="ctxToggle" class="link">Contexte FR</button></div>
+      <p id="stem" class="stem"></p>
+      <div id="opts"></div>
+      <button id="validate" class="primary">Valider</button>
+      <div id="result" hidden></div>
+      <button id="next" class="primary" hidden>Suivante</button>
+    </div>
+    <aside id="ctx" class="card ctx">
+      <h3>Contexte en français</h3>
+      <div id="ctxBody"></div>
+    </aside>
+  </section>
+</main>
+<script src="data/base.js"></script>
+<script src="data/questions.js"></script>
+<script src="data/fr1.js"></script>
+<script src="data/fr2.js"></script>
+<script src="data/fr3.js"></script>
+<script src="data/fr4.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
